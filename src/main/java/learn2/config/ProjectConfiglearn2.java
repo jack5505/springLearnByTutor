@@ -23,7 +23,7 @@ public class ProjectConfiglearn2 {
 //    }
 
     @Bean
-    @Qualifier("cat")
+    @Qualifier(value = "cat1")
     public Cat cat(){
         Cat cat = new Cat();
         cat.setName("first");
@@ -31,7 +31,7 @@ public class ProjectConfiglearn2 {
     }
 
     @Bean
-    @Qualifier("cat2")
+    @Qualifier(value = "cat2")
     public Cat cat2(){
         Cat cat = new Cat();
         cat.setName("second");

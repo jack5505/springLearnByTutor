@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class Owner {
 
     @Autowired
-    @Qualifier("cat2")
+    @Qualifier("cat1")
     private Cat cat;
 
     public Cat getCat() {
