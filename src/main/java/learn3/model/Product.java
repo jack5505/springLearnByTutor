@@ -5,6 +5,13 @@ public class Product {
     private String names;
     private Long price;
 
+    public Product(Long id, String names, Long price) {
+
+        this.id = id;
+        this.names = names;
+        this.price = price;
+    }
+
     public Long getId() {
         return id;
     }

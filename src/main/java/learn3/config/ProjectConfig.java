@@ -15,9 +15,9 @@ public class ProjectConfig {
     @Bean
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUrl("jdbc:postgresql://localhost");
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/learn");
         dataSource.setUsername("postgres");
-        dataSource.setPassword("postgres");
+        dataSource.setPassword("admin");
         return dataSource;
     }
 
