@@ -1,12 +1,14 @@
 package learn2.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Owner {
 
     @Autowired
+    @Qualifier("cat2")
     private Cat cat;
 
     public Cat getCat() {

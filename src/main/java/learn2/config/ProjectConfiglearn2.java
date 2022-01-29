@@ -2,6 +2,7 @@ package learn2.config;
 
 import learn2.beans.Cat;
 import learn2.beans.Owner;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.*;
 
 @Configuration
@@ -22,6 +23,7 @@ public class ProjectConfiglearn2 {
 //    }
 
     @Bean
+    @Qualifier("cat")
     public Cat cat(){
         Cat cat = new Cat();
         cat.setName("first");
@@ -29,7 +31,7 @@ public class ProjectConfiglearn2 {
     }
 
     @Bean
-    @Primary
+    @Qualifier("cat2")
     public Cat cat2(){
         Cat cat = new Cat();
         cat.setName("second");
