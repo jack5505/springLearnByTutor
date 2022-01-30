@@ -1,19 +1,15 @@
-package learn3;
+package learn4;
 
-import learn3.config.ProjectConfig;
-import learn3.model.Product;
-import learn3.repositories.ProductRepository;
+import learn4.config.ProjectConfig;
+import learn4.services.HelloService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
         try(AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class)){
-
-            ProductRepository repository = context.getBean(ProductRepository.class);
-
-            repository.getAll().forEach(System.out::println);
-
-
+            HelloService helloService = context.getBean(HelloService.class);
+            System.out.println(helloService.hello("jack"));
+            
         }
     }
 }
