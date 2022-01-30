@@ -8,8 +8,9 @@ public class Main {
     public static void main(String[] args) {
         try(AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class)){
             HelloService helloService = context.getBean(HelloService.class);
-            System.out.println(helloService.hello("jack"));
-            
+            String temp = helloService.hello("jack");
+            System.out.println(temp);
+
         }
     }
 }
