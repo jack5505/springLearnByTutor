@@ -34,7 +34,8 @@ public class HelloServiceAspect {
         System.out.println("A");
         T result = null;
         try {
-            result = (T) proced.proceed();
+            // result = (T) proced.proceed();
+            result = (T) proced.proceed(new Object[]{"Jakhongir"});  // send parameter into method just cool
             System.out.println(result);
         } catch (Throwable throwable) {
             throwable.printStackTrace();
